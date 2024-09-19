@@ -9,38 +9,60 @@
 <body>
     <header>
         <h3 class="header-logo">ДЕШЕВА ПАЛЬ</h3>
-        <table>
-            <tr>
-                <td><a href="matan.html">
-                    Матан
-                </a></td>
-                <td><a href="OP.html">
-                    ОП
-                </a></td>
-                <td><a href="asd.html">
-                    АСД
-                </a></td>
-                <td><a href="contacts.html">
-                    Контакти
-                </a></td>
-            </tr>
-        </table>
+        <nav>
+            <table>
+                <tr>
+                    <td><a href="matan.html">
+                        Матан
+                    </a></td>
+                    <td><a href="OP.html">
+                      ОП
+                    </a></td>
+                    <td><a href="asd.html">
+                        АСД
+                    </a></td>
+                    <td><a href="contacts.html">
+                      Контакти
+                    </a></td>
+                </tr>
+            </table>
+        </nav>
     </header>
     
     <main>
         <aside class="left-side">
-            <img  src="images/fice_main.gif" width="300" alt="fice_main">
+            <img  src="images/fice_main.gif" width="300" alt="fice_main" usemap="#fice_main_map">
+            <map name="fice_main_map">
+                <area
+                  shape="rect"
+                  coords="0, 0, 300, 500"
+                  alt="Вхід до церкви"
+                  href="contacts.html"
+                />
+              </map>
 
         </aside>
 
         <section class="midl-section">
             <h3>Чому важко вчитись?</h3>
-            <p>
+            <ol>
+                <li>
+                    Високі вимоги: дедлайни, курсові та контрольні роботи завжди під постійним тиском.
+                </li>
+                <li>
+                    Конкуренція серед найкращих студентів змушує докладати ще більше зусиль.
+                </li>
+                <li>
+                    Технічні предмети вимагають не лише знання теорії, але й багато практики, 
+                що робить навчання справжнім викликом для кожного.
+                </li>
+            </ol>
+            <!--<p>
                 Високі вимоги: дедлайни, курсові та контрольні роботи завжди під постійним тиском.
                 Конкуренція серед найкращих студентів змушує докладати ще більше зусиль. 
                 Технічні предмети вимагають не лише знання теорії, але й багато практики, 
                 що робить навчання справжнім викликом для кожного.
-            </p>
+            </p>-->
         </section>
 
         <div class="right-side">

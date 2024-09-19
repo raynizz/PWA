@@ -127,6 +127,10 @@ footer {
 }
 
 table {
+    width: 100%;
+}
+
+nav {
     width: 30%;
 }
 
@@ -162,3 +166,14 @@ a {
     color: black;
 }
 
+li {
+    font:
+      1rem 'Fira Sans',
+      sans-serif;
+    margin-bottom: 0.5rem;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+  }
+  
