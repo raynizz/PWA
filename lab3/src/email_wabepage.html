@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout - Variant 9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+        
+        body, html {
+            font-family: Arial, sans-serif;
+            min-height: 100dvh;
+            width: 100vw;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        
+        header, footer {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            background-color: #90caf9;
+            padding: 40px 20px;
+            align-items: center;
+        }
+
+        footer p {
+            justify-self: start;
+        }
+
+        footer h3 {
+            justify-self: end;
+        }
+        
+        .header-logo {
+            background-color: white;
+            color: #000;
+            width: 10%;
+            border: 2px solid black;
+            text-align: right;
+            padding: 10px;
+        }
+
+        .footer-logo {
+            background-color: white;
+            color: #000;
+            width: 120%;
+            text-align: left;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        
+        nav {
+            width: 100%;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        td {
+            padding: 15px 5px;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+        
+        td:hover {
+            cursor: pointer;
+            background-color: rgb(227, 227, 227);
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-gap: 4vw;
+        }
+        
+        .left-side {
+            background-color: aqua;
+            padding: 20px;
+            display: grid;
+            justify-items: left;
+            align-content: center;
+        }
+        
+        .midl-section {
+            background-color: #b49b9b;
+            padding: 20px;
+            display: grid;
+            justify-items: left;
+            align-content: center;
+            text-align: left;
+        }
+
+        .midl-section ol {
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
+        }
+        
+        .right-side {
+            display: grid;
+            grid-template-rows: 1fr 4fr;
+            background-color: #ffffff;
+        }
+        
+        .up-row {
+            background-color: coral;
+            display: grid;
+            place-items: center;
+            padding: 20px;
+        }
+        
+        .down-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 4vw;
+        }
+        
+        .down-left-column {
+            background-color: chartreuse;
+            padding: 20px;
+            display: grid;
+            justify-items: left;
+            align-content: center;
+            text-align: left;
+        }
+
+        .down-left-column p {
+            margin: 0;
+            padding: 5px;
+        }
+        
+        .down-right-column {
+            background-color: violet;
+            padding: 20px;
+            display: grid;
+            place-items: center;
+        }
+        
+        ol, ul {
+            text-align: left;
+            justify-items: center;
+            margin-top: 10px;
+        }
+        
+        li {
+            font:
+            1rem 'Fira Sans',
+            sans-serif;
+            margin-bottom: 0.5rem;
+            margin-top: 10px;
+            justify-content: center;
+            align-items: left;
+            text-align: left;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3 class="header-logo">ДЕШЕВА ПАЛЬ</h3>
+        <nav>
+            <table>
+                <tr>
+                    <td><a href="flexbox.html">
+                        FLEX
+                    </a></td>
+                    <td><a href="grid.html">
+                        GRID
+                    </a></td>
+                    <td><a href="table.html">
+                      TABLE
+                    </a></td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+    
+    <main>
+        <aside class="left-side">
+            <img src="img/fice_main.gif" width="300" alt="fice_main" usemap="#fice_main_map">
+            <map name="fice_main_map">
+                <area shape="rect" coords="0, 0, 300, 500" alt="Вхід до церкви" href="contacts.html" />
+            </map>
+        </aside>
+
+        <section class="midl-section">
+            <h3>Чому важко вчитись?</h3>
+            <ol>
+                <li>Високі вимоги: дедлайни, курсові та контрольні роботи завжди під постійним тиском.</li>
+                <li>Конкуренція серед найкращих студентів змушує докладати ще більше зусиль.</li>
+                <li>Технічні предмети вимагають не лише знання теорії, але й багато практики, що робить навчання справжнім викликом для кожного.</li>
+            </ol>
+        </section>
+
+        <div class="right-side">
+            <div class="up-row">
+                <h3>НАШІ НАДЗВИЧАЙНІ ПЕРЕВАГИ!<br></h3>
+            </div>
+            <div class="down-row">
+                <div class="down-left-column">
+                    <p>
+                        Ви навіть не уявляєте, як іноді складно зробити певні роботи.
+                        Але не хвилюйтеся, адже ми завжди готові допомогти вам.
+                    </p>
+                    <p>
+                        Ми здатні відшукати роботи будь-якого року, зважаючи на ваші потреби.
+                    </p>
+                    <p>
+                        Все дуже  просто: ви повідомляєте нам про свій запит, а ми виконувємо роботу швидко та ефектив                        
+                    </p>
+                </div>
+                <div class="down-right-column">
+                    <ul>
+                        <li>
+                            Купуючи готові роботи минулих років саме у нас, ви отримуєте якісний матеріал, перевірений часом і успішно використаний багатьма студентами. Наші роботи допоможуть вам не лише зрозуміти складні теми, а й зекономити час на виконанні задач. Всі роботи відповідають сучасним вимогам викладачів, тому ви можете бути впевненими у високих результатах.
+                        </li>
+                        <li>
+                            Ми пропонуємо не тільки широкий вибір робіт з різних дисциплін, але й індивідуальний підхід, що гарантує відповідність вашим потребам. Завдяки нашим матеріалам ви зможете легко підготуватися до заліків і екзаменів, залишивши стрес позаду. Успіх у навчанні з нами стає доступнішим!
+                        </li>
+                        <li>
+                            Наші ціни – доступні для кожного студента, а гарантія якості і постійна підтримка роблять співпрацю з нами приємною і ефективною. Ви можете бути впевнені в оригінальності і актуальності матеріалу, який допоможе вам впоратися з будь-якими навчальними викликами.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Купити паль у гарному гуртожитку. Всі права захищені!</p>
+        <h3 class="footer-logo">ДЕШЕВА ПАЛЬ</h3>
+    </footer>
+</body>
+</html>
