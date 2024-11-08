@@ -38,7 +38,7 @@ footer {
 header input {
     width: 8%;
     padding: 10px;
-    margin-left: 12%;
+
 }
 
 header h1 {
@@ -217,4 +217,124 @@ footer ul li:hover {
 .text-top {
     padding-left: 20%;
     padding-right: 20%;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    margin-left: 12%;
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.search-container input[type="text"]::placeholder {
+    text-align: left;
+    color: #aaa;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+    pointer-events: none;
+    сursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header input, header h1 {
+        width: 80%;
+        margin: 5px 0;
+    }
+
+    footer {
+        flex-direction: space-between;
+        padding: 10px;
+    }
+
+    footer h1 {
+        margin: 10px 0;
+    }
+
+    footer ul {
+        flex-wrap: wrap;
+        width: 60%;
+        justify-content: center;
+    }
+
+    footer li {
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .center ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .center li {
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main p, .bottom-text, .bottom-text-underline {
+        font-size: 1em;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .card button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-text, .bottom-text-underline {
+        margin-top: 5px;
+    }
 }
