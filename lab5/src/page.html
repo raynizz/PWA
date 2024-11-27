@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout - Variant 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3 class="header-logo">ДЕШЕВА ПАЛЬ</h3>
+        <nav id="nav-block">
+            <table>
+                <tr>
+                    <td class="nav-link">FLEX</td>
+                    <td class="nav-link">GRID</td>
+                    <td class="nav-link">TABLE</td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+    
+    <main>
+        <aside class="left-side">
+            <img src="img/fice_main.gif" width="250" alt="fice_main" usemap="#fice_main_map">
+            <map name="fice_main_map">
+                <area shape="rect" coords="0, 0, 300, 500" alt="Вхід до церкви" href="contacts.html" />
+            </map>
+        </aside>
+
+        <section class="midl-section">
+            <h3>Чому важко вчитись?</h3>
+            <ol>
+                <li>Високі вимоги: дедлайни, курсові та контрольні роботи завжди під постійним тиском.</li>
+                <li>Конкуренція серед найкращих студентів змушує докладати ще більше зусиль.</li>
+                <li>Технічні предмети вимагають не лише знання теорії, але й багато практики, що робить навчання справжнім викликом для кожного.</li>
+            </ol>
+        </section>
+
+        <div class="right-side">
+            <div class="up-row">
+                <h3>НАШІ НАДЗВИЧАЙНІ ПЕРЕВАГИ!<br></h3>
+            </div>
+            <div class="down-row">
+                <div class="down-left-column" id="down-left-column">
+                    <p>Ви навіть не уявляєте, як іноді складно зробити певні роботи. Але не хвилюйтеся, адже ми завжди готові допомогти вам.</p>
+                    <p>Ми здатні відшукати роботи будь-якого року, зважаючи на ваші потреби.</p>
+                    <p>Все дуже просто: ви повідомляєте нам про свій запит, а ми виконуємо роботу швидко та ефективно.</p>
+                </div>
+                <div class="down-right-column" id="down-right-column">
+                    <ul>
+                        <li>Трохи менше тексту, щоб красивіше вставити в хедер</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Купити паль у гарному гуртожитку. Всі права захищені!</p>
+        <h3 class="footer-logo">ДЕШЕВА ПАЛЬ</h3>
+    </footer>
+
+    <div>
+        <label for="color-select">Choose text color:</label>
+        <select id="color-select">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+    </div>
+
+    <!-- Dialog and Overlay -->
+    <div id="dialog-overlay"></div>
+    <div id="dialog">
+        <form id="radius-form">
+            <label for="radius">Enter radius:</label>
+            <input type="number" id="radius" name="radius" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
