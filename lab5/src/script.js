@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('submit', function(event) {
         if (event.target && event.target.id === 'number-form') {
             event.preventDefault();
-            const numberInput = document.getElementById('number').value;
+            const numberInput = document.getElementById('number');
             const number = parseFloat(numberInput);
             if (!isNaN(number) && number > 0) {
                 if (number > Number.MAX_SAFE_INTEGER) {
@@ -80,8 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.cookie = `minDigit=${minDigit}; path=/`;
                 dialog.style.display = 'none';
                 dialogOverlay.style.display = 'none';
-            } else {
-                alert('Введіть натуральне число');
             }
         }
     });
