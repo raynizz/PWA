@@ -39,6 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // площа кола
     function calculateCircleArea(radius) {
+        if (radius <= 0 || isNaN(radius)) {
+            alert('Введіть додатне число для радіусу');
+            return;
+        }
         const area = Math.PI * Math.pow(radius, 2);
         const resultElement = document.createElement('p');
         resultElement.textContent = `Площа кола з радіусом ${radius} дорівнює ${area.toFixed(2)}`;
@@ -48,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // пошук мінімальної цифри в числі
     function findMinDigit(number) {
-        const digits = number.toString().split('').map(Number);
+        const digits = number.toString().replace(/[^0-9]/g, '').split('').map(Number);
         return Math.min(...digits);
     }
 
@@ -64,8 +68,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('submit', function(event) {
         if (event.target && event.target.id === 'number-form') {
             event.preventDefault();
-            const number = parseInt(document.getElementById('number').value);
-            if (Number.isInteger(number) && number > 0) {
+            const numberInput = document.getElementById('number').value;
+            const number = parseFloat(numberInput);
+            if (!isNaN(number) && number > 0) {
+                if (number > Number.MAX_SAFE_INTEGER) {
+                    alert('Число занадто велике');
+                    return;
+                }
                 const minDigit = findMinDigit(number);
                 alert(`Мінімальна цифра в числі ${number} дорівнює ${minDigit}`);
                 document.cookie = `minDigit=${minDigit}; path=/`;
@@ -129,17 +138,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // вибір кольору для тексту в downRightColumn
-    colorSelect.addEventListener('change', function() {
-        const selectedColor = colorSelect.value;
-        downRightColumn.style.color = selectedColor;
-        localStorage.setItem('downRightColumnTextColor', selectedColor);
-    });
+    if (colorSelect) {
+        colorSelect.addEventListener('change', function() {
+            const selectedColor = colorSelect.value;
+            downRightColumn.style.color = selectedColor;
+            localStorage.setItem('downRightColumnTextColor', selectedColor);
+        });
 
-    // підгрузка кольору з локад стореджа
-    const savedColor = localStorage.getItem('downRightColumnTextColor');
-    if (savedColor) {
-        downRightColumn.style.color = savedColor;
-        colorSelect.value = savedColor;
+        // підгрузка кольору з локад стореджа
+        const savedColor = localStorage.getItem('downRightColumnTextColor');
+        if (savedColor) {
+            downRightColumn.style.color = savedColor;
+            colorSelect.value = savedColor;
+        }
     }
 
     // свторення таблички
